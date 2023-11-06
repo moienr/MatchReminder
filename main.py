@@ -8,7 +8,7 @@ from telegram import ChatMemberUpdated
 
 
 
-with open('token.txt', 'r') as f:
+with open('token_telegram.txt', 'r') as f:
     TOKEN = f.read().strip()
 
 BOT_USERNAME = '@barca_reminder_bot'
