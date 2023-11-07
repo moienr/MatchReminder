@@ -31,7 +31,7 @@ async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
         match = get_next_barca_match('matches.json')
         await context.bot.send_message(chat_id=update.message.chat_id, text=f"The next Barca match is {match}")
     else:
-        await context.bot.send_message(chat_id=update.message.chat_id, text="Barca doesn't play today")
+        await context.bot.send_message(chat_id=update.message.chat_id, text="Barca doesn't play today!")
     
 
 
