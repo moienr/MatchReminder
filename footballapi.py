@@ -80,7 +80,11 @@ def format_next_match(match):
    match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran') 
    match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
    date = match['date'].strftime('%Y-%m-%d')
-   return f'{home_team}-{away_team} | {competition} | Date: {date} | @ TEH: {match_date_teh} - VANC: {match_date_vanc}'
+   days_left = (match['date'] - datetime.now()).days
+   s = 's' if days_left > 1 else ''
+   if competition == 'Primera Division':
+      competition = 'La Liga'
+   return f'{home_team}-{away_team} | {competition} | In {days_left} Day{s} | @ TEH: {match_date_teh} - VANC: {match_date_vanc}'
 
 def does_barca_play_today(json_file='matches.json'):
    # read json
