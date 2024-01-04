@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram.ext import Updater
 from telegram import Bot
 from telegram import ChatMemberUpdated
-from footballapi import get_next_barca_match, does_barca_play_today
+from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match
 from datetime import time
 import os
 
@@ -28,8 +28,8 @@ async def nextmatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
 async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if does_barca_play_today('matches.json'):
-        match = get_next_barca_match('matches.json')
-        await context.bot.send_message(chat_id=update.message.chat_id, text=f"The next Barca match is {match}")
+        match = get_barca_today_match('matches.json')
+        await context.bot.send_message(chat_id=update.message.chat_id, text=f"{match}")
     else:
         await context.bot.send_message(chat_id=update.message.chat_id, text="Barca doesn't play today!")
     
@@ -136,7 +136,7 @@ if __name__ == "__main__":
 
     # polling
     print("Polling...")
-    app.run_polling(poll_interval=5)
+    app.run_polling(poll_interval=10)
     
 
             

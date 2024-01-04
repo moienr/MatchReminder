@@ -69,6 +69,9 @@ def format_today_match(match):
    match_date = match['date'].strftime('%Y-%m-%d %H:%M:%S')
    match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran') 
    match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
+   
+   if competition == 'Primera Division':
+      competition = 'La Liga'
 
    return f'{home_team}-{away_team} | {competition} | @ TEH: {match_date_teh} - VANC: {match_date_vanc}'
 
