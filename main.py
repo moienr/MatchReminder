@@ -29,7 +29,8 @@ async def nextmatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if does_barca_play_today('matches.json'):
         match = get_barca_today_match('matches.json')
-        await context.bot.send_message(chat_id=update.message.chat_id, text=f"{match}")
+        message = await context.bot.send_message(chat_id=update.message.chat_id, text=f"{match}")
+        await context.bot.pin_chat_message(chat_id=update.message.chat_id, message_id=message.message_id)
     else:
         await context.bot.send_message(chat_id=update.message.chat_id, text="Barca doesn't play today!")
     
@@ -137,6 +138,5 @@ if __name__ == "__main__":
     # polling
     print("Polling...")
     app.run_polling(poll_interval=10)
-    
 
-            
+

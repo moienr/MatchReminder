@@ -53,41 +53,40 @@ def get_next_match(data, team_name):
 
 
 def convert_utc_to_city(utc_datetime, to_city='Asia/Tehran'):
-      utc = timezone('UTC')
-      tehran = timezone(to_city)
-      utc_time = datetime.strptime(utc_datetime, '%Y-%m-%dT%H:%M:%SZ')
-      utc_time = utc.localize(utc_time)
-      tehran_time = utc_time.astimezone(tehran)
-      return tehran_time.strftime('%H:%M')
+    utc = timezone('UTC')
+    city_tz = timezone(to_city)
+    utc_time = datetime.strptime(utc_datetime, '%Y-%m-%dT%H:%M:%SZ')
+    utc_time = utc.localize(utc_time)
+    city_time = utc_time.astimezone(city_tz)
+    return city_time.strftime('%H:%M')
 
 
 
 def format_today_match(match):
-   home_team = match['match']['homeTeam']['name']
-   away_team = match['match']['awayTeam']['name']
-   competition = match['match']['competition']['name']
-   match_date = match['date'].strftime('%Y-%m-%d %H:%M:%S')
-   match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran') 
-   match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
-   
-   if competition == 'Primera Division':
-      competition = 'La Liga'
+    home_team = match['match']['homeTeam']['name']
+    away_team = match['match']['awayTeam']['name']
+    competition = match['match']['competition']['name']
+    match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran')
+    match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
+    match_date_cet = convert_utc_to_city(match['match']['utcDate'], to_city='CET')
+    
+    if competition == 'Primera Division':
+        competition = 'La Liga'
 
-   return f'{home_team}-{away_team} | {competition} | @ TEH: {match_date_teh} - VANC: {match_date_vanc}'
+    return f'{home_team}-{away_team} | {competition} | @ TEH: {match_date_teh} - VANC: {match_date_vanc} - CET: {match_date_cet}'
 
 def format_next_match(match):
-   home_team = match['match']['homeTeam']['name']
-   away_team = match['match']['awayTeam']['name']
-   competition = match['match']['competition']['name']
-   match_date = match['date'].strftime('%Y-%m-%d %H:%M:%S')
-   match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran') 
-   match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
-   date = match['date'].strftime('%Y-%m-%d')
-   days_left = (match['date'] - datetime.now()).days
-   s = 's' if days_left > 1 else ''
-   if competition == 'Primera Division':
-      competition = 'La Liga'
-   return f'{home_team}-{away_team} | {competition} | In {days_left} Day{s} | @ TEH: {match_date_teh} - VANC: {match_date_vanc}'
+    home_team = match['match']['homeTeam']['name']
+    away_team = match['match']['awayTeam']['name']
+    competition = match['match']['competition']['name']
+    match_date_teh = convert_utc_to_city(match['match']['utcDate'], to_city='Asia/Tehran')
+    match_date_vanc = convert_utc_to_city(match['match']['utcDate'], to_city='America/Vancouver')
+    match_date_cet = convert_utc_to_city(match['match']['utcDate'], to_city='CET')
+    days_left = (match['date'] - datetime.now()).days
+    s = 's' if days_left > 1 else ''
+    if competition == 'Primera Division':
+        competition = 'La Liga'
+    return f'{home_team}-{away_team} | {competition} | In {days_left} Day{s} | @ TEH: {match_date_teh} - VANC: {match_date_vanc} - CET: {match_date_cet}'
 
 def does_barca_play_today(json_file='matches.json'):
    # read json
