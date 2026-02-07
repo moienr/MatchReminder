@@ -160,6 +160,69 @@ def get_laliga_table():
         return f"Error fetching La Liga table: {response.status_code}"
 
 
+def get_barca_latest_score():
+    """Get the score of Barcelona's most recent or live match"""
+    # Fetch finished and in-play matches
+    url = "https://api.football-data.org/v4/teams/81/matches?status=FINISHED,IN_PLAY"
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code != 200:
+        return f"Error fetching match data: {response.status_code}"
+    
+    matches_data = response.json()
+    matches = matches_data.get('matches', [])
+    
+    if not matches:
+        return "No recent matches found for FC Barcelona."
+    
+    # Get the most recent match (last in the list)
+    latest_match = matches[-1]
+    
+    home_team = latest_match['homeTeam']['name']
+    away_team = latest_match['awayTeam']['name']
+    home_score = latest_match['score']['fullTime']['home']
+    away_score = latest_match['score']['fullTime']['away']
+    status = latest_match['status']
+    competition = latest_match['competition']['name']
+    match_date = datetime.strptime(latest_match['utcDate'], '%Y-%m-%dT%H:%M:%SZ')
+    
+    if competition == 'Primera Division':
+        competition = 'La Liga'
+    
+    # Format the date
+    date_str = match_date.strftime('%b %d, %Y')
+    
+    # Build the message based on match status
+    if status == 'IN_PLAY':
+        score_text = f"⚽ *LIVE MATCH*\n\n"
+        score_text += f"{home_team} {home_score} - {away_score} {away_team}\n"
+        score_text += f"{competition}\n"
+    elif status == 'FINISHED':
+        score_text = f"⚽ *Latest Result*\n\n"
+        score_text += f"{home_team} {home_score} - {away_score} {away_team}\n"
+        score_text += f"{competition} | {date_str}\n"
+        
+        # Add result indicator for Barcelona
+        if home_team == 'FC Barcelona':
+            if home_score > away_score:
+                score_text += "\n🔵🔴 Barcelona Won! 🎉"
+            elif home_score < away_score:
+                score_text += "\n😔 Barcelona Lost"
+            else:
+                score_text += "\n🤝 Draw"
+        else:
+            if away_score > home_score:
+                score_text += "\n🔵🔴 Barcelona Won! 🎉"
+            elif away_score < home_score:
+                score_text += "\n😔 Barcelona Lost"
+            else:
+                score_text += "\n🤝 Draw"
+    else:
+        score_text = f"Match status: {status}"
+    
+    return score_text
+
+
 if __name__ == '__main__':
    does_barca_play_today()
    get_next_barca_match('matches.json')

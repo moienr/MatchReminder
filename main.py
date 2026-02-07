@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram.ext import Updater
 from telegram import Bot
 from telegram import ChatMemberUpdated
-from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table
+from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table, get_barca_latest_score
 from datetime import time
 import os
 
@@ -25,6 +25,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 /help - Show this help message
 /nextmatch - Get the next Barça match
 /todaymatch - Check if Barça plays today and pin the match
+/score - Get the latest match score or live score
 /table - Get the current La Liga table (all 20 teams)
 
 ⚽ Visca Barça! ⚽
@@ -49,6 +50,11 @@ async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
 async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     table = get_laliga_table()
     await context.bot.send_message(chat_id=update.message.chat_id, text=table)
+
+
+async def score_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    score = get_barca_latest_score()
+    await context.bot.send_message(chat_id=update.message.chat_id, text=score)
 
 
 def handle_response(text:str)-> str:
@@ -139,6 +145,7 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler('help', help_command))
     app.add_handler(CommandHandler('nextmatch', nextmatch_command))
     app.add_handler(CommandHandler('todaymatch', todaymatch_command))
+    app.add_handler(CommandHandler('score', score_command))
     app.add_handler(CommandHandler('table', table_command))
     # In your main function
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, handle_new_chat_members))

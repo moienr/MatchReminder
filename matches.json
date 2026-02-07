@@ -8,82 +8,16 @@
         "limit": 100
     },
     "resultSet": {
-        "count": 16,
+        "count": 15,
         "competitions": "PD",
-        "first": "2026-02-07",
+        "first": "2026-02-16",
         "last": "2026-05-24",
         "played": 0,
         "wins": 0,
-        "draws": 16,
+        "draws": 15,
         "losses": 0
     },
     "matches": [
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2429,
-                "startDate": "2025-08-17",
-                "endDate": "2026-05-24",
-                "currentMatchday": 23,
-                "winner": null
-            },
-            "id": 544434,
-            "utcDate": "2026-02-07T15:15:00Z",
-            "status": "TIMED",
-            "matchday": 23,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2026-02-07T15:08:17Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 89,
-                "name": "RCD Mallorca",
-                "shortName": "Mallorca",
-                "tla": "MAL",
-                "crest": "https://crests.football-data.org/89.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": [
-                {
-                    "id": 214410,
-                    "name": "Alejandro Quintero Gonz\u00e1lez",
-                    "type": "REFEREE",
-                    "nationality": "Spain"
-                }
-            ]
-        },
         {
             "area": {
                 "id": 2224,
