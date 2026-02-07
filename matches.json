@@ -8,13 +8,13 @@
         "limit": 100
     },
     "resultSet": {
-        "count": 21,
-        "competitions": "PD,CL",
-        "first": "2025-01-18",
-        "last": "2025-05-25",
+        "count": 16,
+        "competitions": "PD",
+        "first": "2026-02-07",
+        "last": "2026-05-24",
         "played": 0,
         "wins": 0,
-        "draws": 21,
+        "draws": 16,
         "losses": 0
     },
     "matches": [
@@ -33,904 +33,19 @@
                 "emblem": "https://crests.football-data.org/laliga.png"
             },
             "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
                 "winner": null
             },
-            "id": 498807,
-            "utcDate": "2025-01-18T20:00:00Z",
+            "id": 544434,
+            "utcDate": "2026-02-07T15:15:00Z",
             "status": "TIMED",
-            "matchday": 20,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-12-20T15:20:29Z",
-            "homeTeam": {
-                "id": 82,
-                "name": "Getafe CF",
-                "shortName": "Getafe",
-                "tla": "GET",
-                "crest": "https://crests.football-data.org/82.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2077,
-                "name": "Europe",
-                "code": "EUR",
-                "flag": "https://crests.football-data.org/EUR.svg"
-            },
-            "competition": {
-                "id": 2001,
-                "name": "UEFA Champions League",
-                "code": "CL",
-                "type": "CUP",
-                "emblem": "https://crests.football-data.org/CL.png"
-            },
-            "season": {
-                "id": 2350,
-                "startDate": "2024-09-17",
-                "endDate": "2025-05-31",
-                "currentMatchday": 7,
-                "winner": null
-            },
-            "id": 523984,
-            "utcDate": "2025-01-21T20:00:00Z",
-            "status": "TIMED",
-            "matchday": 7,
-            "stage": "LEAGUE_STAGE",
-            "group": null,
-            "lastUpdated": "2024-08-31T17:14:30Z",
-            "homeTeam": {
-                "id": 1903,
-                "name": "Sport Lisboa e Benfica",
-                "shortName": "SL Benfica",
-                "tla": "BEN",
-                "crest": "https://crests.football-data.org/1903.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498816,
-            "utcDate": "2025-01-26T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 21,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 95,
-                "name": "Valencia CF",
-                "shortName": "Valencia",
-                "tla": "VAL",
-                "crest": "https://crests.football-data.org/95.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2077,
-                "name": "Europe",
-                "code": "EUR",
-                "flag": "https://crests.football-data.org/EUR.svg"
-            },
-            "competition": {
-                "id": 2001,
-                "name": "UEFA Champions League",
-                "code": "CL",
-                "type": "CUP",
-                "emblem": "https://crests.football-data.org/CL.png"
-            },
-            "season": {
-                "id": 2350,
-                "startDate": "2024-09-17",
-                "endDate": "2025-05-31",
-                "currentMatchday": 7,
-                "winner": null
-            },
-            "id": 523941,
-            "utcDate": "2025-01-29T20:00:00Z",
-            "status": "TIMED",
-            "matchday": 8,
-            "stage": "LEAGUE_STAGE",
-            "group": null,
-            "lastUpdated": "2024-08-31T17:14:30Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 102,
-                "name": "Atalanta BC",
-                "shortName": "Atalanta",
-                "tla": "ATA",
-                "crest": "https://crests.football-data.org/102.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498827,
-            "utcDate": "2025-02-02T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 22,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 263,
-                "name": "Deportivo Alav\u00e9s",
-                "shortName": "Alav\u00e9s",
-                "tla": "ALA",
-                "crest": "https://crests.football-data.org/263.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498836,
-            "utcDate": "2025-02-09T00:00:00Z",
-            "status": "SCHEDULED",
             "matchday": 23,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 559,
-                "name": "Sevilla FC",
-                "shortName": "Sevilla FC",
-                "tla": "SEV",
-                "crest": "https://crests.football-data.org/559.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498847,
-            "utcDate": "2025-02-16T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 24,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 87,
-                "name": "Rayo Vallecano de Madrid",
-                "shortName": "Rayo Vallecano",
-                "tla": "RAY",
-                "crest": "https://crests.football-data.org/87.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498861,
-            "utcDate": "2025-02-23T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 25,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 275,
-                "name": "UD Las Palmas",
-                "shortName": "Las Palmas",
-                "tla": "LPA",
-                "crest": "https://crests.football-data.org/275.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498867,
-            "utcDate": "2025-03-02T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 26,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 92,
-                "name": "Real Sociedad de F\u00fatbol",
-                "shortName": "Real Sociedad",
-                "tla": "RSO",
-                "crest": "https://crests.football-data.org/92.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498877,
-            "utcDate": "2025-03-09T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 27,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 79,
-                "name": "CA Osasuna",
-                "shortName": "Osasuna",
-                "tla": "OSA",
-                "crest": "https://crests.football-data.org/79.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498883,
-            "utcDate": "2025-03-16T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 28,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 78,
-                "name": "Club Atl\u00e9tico de Madrid",
-                "shortName": "Atleti",
-                "tla": "ATL",
-                "crest": "https://crests.football-data.org/78.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498897,
-            "utcDate": "2025-03-30T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 29,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 298,
-                "name": "Girona FC",
-                "shortName": "Girona",
-                "tla": "GIR",
-                "crest": "https://crests.football-data.org/298.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498904,
-            "utcDate": "2025-04-06T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 30,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 90,
-                "name": "Real Betis Balompi\u00e9",
-                "shortName": "Real Betis",
-                "tla": "BET",
-                "crest": "https://crests.football-data.org/90.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498917,
-            "utcDate": "2025-04-13T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 31,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 745,
-                "name": "CD Legan\u00e9s",
-                "shortName": "Legan\u00e9s",
-                "tla": "LEG",
-                "crest": "https://crests.football-data.org/745.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498923,
-            "utcDate": "2025-04-20T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 32,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "awayTeam": {
-                "id": 558,
-                "name": "RC Celta de Vigo",
-                "shortName": "Celta",
-                "tla": "CEL",
-                "crest": "https://crests.football-data.org/558.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498940,
-            "utcDate": "2025-04-23T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 33,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
+            "lastUpdated": "2026-02-07T15:08:17Z",
             "homeTeam": {
                 "id": 81,
                 "name": "FC Barcelona",
@@ -960,7 +75,14 @@
             "odds": {
                 "msg": "Activate Odds-Package in User-Panel to retrieve odds."
             },
-            "referees": []
+            "referees": [
+                {
+                    "id": 214410,
+                    "name": "Alejandro Quintero Gonz\u00e1lez",
+                    "type": "REFEREE",
+                    "nationality": "Spain"
+                }
+            ]
         },
         {
             "area": {
@@ -977,25 +99,25 @@
                 "emblem": "https://crests.football-data.org/laliga.png"
             },
             "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
                 "winner": null
             },
-            "id": 498950,
-            "utcDate": "2025-05-04T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 34,
+            "id": 544448,
+            "utcDate": "2026-02-16T20:00:00Z",
+            "status": "TIMED",
+            "matchday": 24,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
+            "lastUpdated": "2026-01-29T15:21:04Z",
             "homeTeam": {
-                "id": 250,
-                "name": "Real Valladolid CF",
-                "shortName": "Valladolid",
-                "tla": "VDD",
-                "crest": "https://crests.football-data.org/250.png"
+                "id": 298,
+                "name": "Girona FC",
+                "shortName": "Girona",
+                "tla": "GIR",
+                "crest": "https://crests.football-data.org/298.png"
             },
             "awayTeam": {
                 "id": 81,
@@ -1036,19 +158,19 @@
                 "emblem": "https://crests.football-data.org/laliga.png"
             },
             "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
                 "winner": null
             },
-            "id": 498957,
-            "utcDate": "2025-05-11T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 35,
+            "id": 544454,
+            "utcDate": "2026-02-22T15:15:00Z",
+            "status": "TIMED",
+            "matchday": 25,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-12-29T10:20:54Z",
+            "lastUpdated": "2026-02-03T00:20:56Z",
             "homeTeam": {
                 "id": 81,
                 "name": "FC Barcelona",
@@ -1057,11 +179,11 @@
                 "crest": "https://crests.football-data.org/81.png"
             },
             "awayTeam": {
-                "id": 86,
-                "name": "Real Madrid CF",
-                "shortName": "Real Madrid",
-                "tla": "RMA",
-                "crest": "https://crests.football-data.org/86.png"
+                "id": 88,
+                "name": "Levante UD",
+                "shortName": "Levante",
+                "tla": "LEV",
+                "crest": "https://crests.football-data.org/88.png"
             },
             "score": {
                 "winner": null,
@@ -1095,78 +217,19 @@
                 "emblem": "https://crests.football-data.org/laliga.png"
             },
             "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
                 "winner": null
             },
-            "id": 498972,
-            "utcDate": "2025-05-14T00:00:00Z",
+            "id": 544461,
+            "utcDate": "2026-03-01T00:00:00Z",
             "status": "SCHEDULED",
-            "matchday": 36,
+            "matchday": 26,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
-            "homeTeam": {
-                "id": 80,
-                "name": "RCD Espanyol de Barcelona",
-                "shortName": "Espanyol",
-                "tla": "ESP",
-                "crest": "https://crests.football-data.org/80.png"
-            },
-            "awayTeam": {
-                "id": 81,
-                "name": "FC Barcelona",
-                "shortName": "Bar\u00e7a",
-                "tla": "FCB",
-                "crest": "https://crests.football-data.org/81.png"
-            },
-            "score": {
-                "winner": null,
-                "duration": "REGULAR",
-                "fullTime": {
-                    "home": null,
-                    "away": null
-                },
-                "halfTime": {
-                    "home": null,
-                    "away": null
-                }
-            },
-            "odds": {
-                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-            },
-            "referees": []
-        },
-        {
-            "area": {
-                "id": 2224,
-                "name": "Spain",
-                "code": "ESP",
-                "flag": "https://crests.football-data.org/760.svg"
-            },
-            "competition": {
-                "id": 2014,
-                "name": "Primera Division",
-                "code": "PD",
-                "type": "LEAGUE",
-                "emblem": "https://crests.football-data.org/laliga.png"
-            },
-            "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
-                "winner": null
-            },
-            "id": 498975,
-            "utcDate": "2025-05-18T00:00:00Z",
-            "status": "SCHEDULED",
-            "matchday": 37,
-            "stage": "REGULAR_SEASON",
-            "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
+            "lastUpdated": "2025-08-29T05:20:57Z",
             "homeTeam": {
                 "id": 81,
                 "name": "FC Barcelona",
@@ -1213,25 +276,674 @@
                 "emblem": "https://crests.football-data.org/laliga.png"
             },
             "season": {
-                "id": 2292,
-                "startDate": "2024-08-18",
-                "endDate": "2025-05-25",
-                "currentMatchday": 18,
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
                 "winner": null
             },
-            "id": 498983,
-            "utcDate": "2025-05-25T00:00:00Z",
+            "id": 544471,
+            "utcDate": "2026-03-08T00:00:00Z",
             "status": "SCHEDULED",
-            "matchday": 38,
+            "matchday": 27,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-08-30T05:21:19Z",
+            "lastUpdated": "2025-08-29T05:20:57Z",
             "homeTeam": {
                 "id": 77,
                 "name": "Athletic Club",
                 "shortName": "Athletic",
                 "tla": "ATH",
                 "crest": "https://crests.football-data.org/77.png"
+            },
+            "awayTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544483,
+            "utcDate": "2026-03-15T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 28,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 559,
+                "name": "Sevilla FC",
+                "shortName": "Sevilla FC",
+                "tla": "SEV",
+                "crest": "https://crests.football-data.org/559.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544492,
+            "utcDate": "2026-03-22T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 29,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 87,
+                "name": "Rayo Vallecano de Madrid",
+                "shortName": "Rayo Vallecano",
+                "tla": "RAY",
+                "crest": "https://crests.football-data.org/87.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544502,
+            "utcDate": "2026-04-05T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 30,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 78,
+                "name": "Club Atl\u00e9tico de Madrid",
+                "shortName": "Atleti",
+                "tla": "ATL",
+                "crest": "https://crests.football-data.org/78.png"
+            },
+            "awayTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544512,
+            "utcDate": "2026-04-12T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 31,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 80,
+                "name": "RCD Espanyol de Barcelona",
+                "shortName": "Espanyol",
+                "tla": "ESP",
+                "crest": "https://crests.football-data.org/80.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544532,
+            "utcDate": "2026-04-22T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 33,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 558,
+                "name": "RC Celta de Vigo",
+                "shortName": "Celta",
+                "tla": "CEL",
+                "crest": "https://crests.football-data.org/558.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544527,
+            "utcDate": "2026-04-26T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 32,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2026-02-07T00:20:52Z",
+            "homeTeam": {
+                "id": 82,
+                "name": "Getafe CF",
+                "shortName": "Getafe",
+                "tla": "GET",
+                "crest": "https://crests.football-data.org/82.png"
+            },
+            "awayTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544548,
+            "utcDate": "2026-05-03T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 34,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 79,
+                "name": "CA Osasuna",
+                "shortName": "Osasuna",
+                "tla": "OSA",
+                "crest": "https://crests.football-data.org/79.png"
+            },
+            "awayTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544553,
+            "utcDate": "2026-05-10T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 35,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2026-02-07T10:21:01Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 86,
+                "name": "Real Madrid CF",
+                "shortName": "Real Madrid",
+                "tla": "RMA",
+                "crest": "https://crests.football-data.org/86.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544561,
+            "utcDate": "2026-05-13T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 36,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 263,
+                "name": "Deportivo Alav\u00e9s",
+                "shortName": "Alav\u00e9s",
+                "tla": "ALA",
+                "crest": "https://crests.football-data.org/263.png"
+            },
+            "awayTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544573,
+            "utcDate": "2026-05-17T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 37,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 81,
+                "name": "FC Barcelona",
+                "shortName": "Bar\u00e7a",
+                "tla": "FCB",
+                "crest": "https://crests.football-data.org/81.png"
+            },
+            "awayTeam": {
+                "id": 90,
+                "name": "Real Betis Balompi\u00e9",
+                "shortName": "Real Betis",
+                "tla": "BET",
+                "crest": "https://crests.football-data.org/90.png"
+            },
+            "score": {
+                "winner": null,
+                "duration": "REGULAR",
+                "fullTime": {
+                    "home": null,
+                    "away": null
+                },
+                "halfTime": {
+                    "home": null,
+                    "away": null
+                }
+            },
+            "odds": {
+                "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+            },
+            "referees": []
+        },
+        {
+            "area": {
+                "id": 2224,
+                "name": "Spain",
+                "code": "ESP",
+                "flag": "https://crests.football-data.org/760.svg"
+            },
+            "competition": {
+                "id": 2014,
+                "name": "Primera Division",
+                "code": "PD",
+                "type": "LEAGUE",
+                "emblem": "https://crests.football-data.org/laliga.png"
+            },
+            "season": {
+                "id": 2429,
+                "startDate": "2025-08-17",
+                "endDate": "2026-05-24",
+                "currentMatchday": 23,
+                "winner": null
+            },
+            "id": 544589,
+            "utcDate": "2026-05-24T00:00:00Z",
+            "status": "SCHEDULED",
+            "matchday": 38,
+            "stage": "REGULAR_SEASON",
+            "group": null,
+            "lastUpdated": "2025-08-29T05:20:57Z",
+            "homeTeam": {
+                "id": 95,
+                "name": "Valencia CF",
+                "shortName": "Valencia",
+                "tla": "VAL",
+                "crest": "https://crests.football-data.org/95.png"
             },
             "awayTeam": {
                 "id": 81,

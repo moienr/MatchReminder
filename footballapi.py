@@ -129,6 +129,37 @@ def get_barca_today_match(json_file='matches.json'):
       print('No upcoming matches found for FC Barcelona Today.')
       return None
 
+def get_laliga_table():
+    """Get the current La Liga standings"""
+    url = "https://api.football-data.org/v4/competitions/PD/standings"
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        standings_data = response.json()
+        standings = standings_data['standings'][0]['table']
+        
+        table_text = "🏆 *La Liga Table*\n\n"
+        
+        for team in standings:  # Show all teams
+            pos = team['position']
+            name = team['team']['name']
+            points = team['points']
+            gd = team['goalDifference']
+            played = team['playedGames']
+            
+            # Highlight Barcelona
+            if name.startswith("FC Barcelona") or name.startswith("Barcelona"):
+                table_text += f"🔵🔴 *{pos}. {name}*\n"
+            else:
+                table_text += f"{pos}. {name}\n"
+            
+            table_text += f"   Pts: {points} | Played: {played} | GD: {gd:+d}\n\n"
+        
+        return table_text
+    else:
+        return f"Error fetching La Liga table: {response.status_code}"
+
+
 if __name__ == '__main__':
    does_barca_play_today()
    get_next_barca_match('matches.json')

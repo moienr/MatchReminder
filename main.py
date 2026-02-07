@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram.ext import Updater
 from telegram import Bot
 from telegram import ChatMemberUpdated
-from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match
+from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table
 from datetime import time
 import os
 
@@ -18,7 +18,18 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hello!, if you add me to a group, I will remind you of the next Barça match.')
     
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Help!')
+    help_text = """
+🔵🔴 Barça Reminder Bot Commands:
+
+/start - Start the bot
+/help - Show this help message
+/nextmatch - Get the next Barça match
+/todaymatch - Check if Barça plays today and pin the match
+/table - Get the current La Liga table (all 20 teams)
+
+⚽ Visca Barça! ⚽
+    """
+    await update.message.reply_text(help_text)
 
 # Responses
 async def nextmatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -33,7 +44,11 @@ async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
         await context.bot.pin_chat_message(chat_id=update.message.chat_id, message_id=message.message_id)
     else:
         await context.bot.send_message(chat_id=update.message.chat_id, text="Barca doesn't play today!")
-    
+
+
+async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    table = get_laliga_table()
+    await context.bot.send_message(chat_id=update.message.chat_id, text=table)
 
 
 def handle_response(text:str)-> str:
@@ -124,6 +139,7 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler('help', help_command))
     app.add_handler(CommandHandler('nextmatch', nextmatch_command))
     app.add_handler(CommandHandler('todaymatch', todaymatch_command))
+    app.add_handler(CommandHandler('table', table_command))
     # In your main function
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, handle_new_chat_members))
     ## messages
