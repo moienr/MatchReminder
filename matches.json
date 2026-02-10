@@ -45,7 +45,7 @@
             "matchday": 24,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2026-01-29T15:21:04Z",
+            "lastUpdated": "2026-02-10T01:32:04Z",
             "homeTeam": {
                 "id": 298,
                 "name": "Girona FC",
@@ -158,12 +158,12 @@
                 "winner": null
             },
             "id": 544461,
-            "utcDate": "2026-03-01T00:00:00Z",
-            "status": "SCHEDULED",
+            "utcDate": "2026-02-28T15:15:00Z",
+            "status": "TIMED",
             "matchday": 26,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-08-29T05:20:57Z",
+            "lastUpdated": "2026-02-08T00:20:52Z",
             "homeTeam": {
                 "id": 81,
                 "name": "FC Barcelona",
@@ -694,7 +694,7 @@
             "matchday": 35,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2026-02-07T10:21:01Z",
+            "lastUpdated": "2026-02-10T15:21:01Z",
             "homeTeam": {
                 "id": 81,
                 "name": "FC Barcelona",

@@ -138,7 +138,7 @@ def get_laliga_table():
         standings_data = response.json()
         standings = standings_data['standings'][0]['table']
         
-        table_text = "🏆 *La Liga Table*\n\n"
+        table_text = "🏆 La Liga Table\n\n```\n"
         
         for team in standings:  # Show all teams
             pos = team['position']
@@ -149,12 +149,13 @@ def get_laliga_table():
             
             # Highlight Barcelona
             if name.startswith("FC Barcelona") or name.startswith("Barcelona"):
-                table_text += f"🔵🔴 *{pos}. {name}*\n"
+                table_text += f"🔵🔴 {pos}. {name}\n"
             else:
                 table_text += f"{pos}. {name}\n"
             
             table_text += f"   Pts: {points} | Played: {played} | GD: {gd:+d}\n\n"
         
+        table_text += "```"
         return table_text
     else:
         return f"Error fetching La Liga table: {response.status_code}"

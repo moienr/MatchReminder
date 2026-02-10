@@ -49,7 +49,7 @@ async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     table = get_laliga_table()
-    await context.bot.send_message(chat_id=update.message.chat_id, text=table)
+    await context.bot.send_message(chat_id=update.message.chat_id, text=table, parse_mode='Markdown')
 
 
 async def score_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
