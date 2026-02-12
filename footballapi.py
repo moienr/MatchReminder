@@ -10,19 +10,33 @@ import json
 with open('token_api.txt', 'r') as f:
 	token = f.read()
 
-url = "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED"
+url = "https://api.football-data.org/v4/teams/81/matches"
 headers = {"X-Auth-Token": token}
 
 response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
 	# The request was successful
-	matches = response.json()
-	# Do something with the matches data
-	# pprint.pprint(matches)
+	matches_data = response.json()
+	
+	# Filter to only include future matches (status SCHEDULED or TIMED)
+	from datetime import datetime
+	future_matches = [m for m in matches_data['matches'] 
+	                  if datetime.strptime(m['utcDate'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now()
+	                  and m['status'] in ['SCHEDULED', 'TIMED']]
+	
+	# Sort by date
+	future_matches.sort(key=lambda x: x['utcDate'])
+	
+	matches = {
+		'filters': matches_data.get('filters', {}),
+		'matches': future_matches
+	}
+	
 	# save json
 	with open('matches.json', 'w') as f:
 		json.dump(matches, f, indent=4)
+	print(f"Updated matches.json with {len(future_matches)} upcoming matches")
 else:
 	# The request failed
 	print("Error:", response.status_code, response.text)
