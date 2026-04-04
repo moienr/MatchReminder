@@ -4,8 +4,9 @@ from telegram.ext import Updater
 from telegram import Bot
 from telegram import ChatMemberUpdated
 from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table, get_barca_latest_score
-from fotmob_utils import get_match_lineup
+from fotmob_utils import get_match_lineup, get_lineup_image
 from datetime import time
+from pytz import timezone
 import os
 
 
@@ -60,8 +61,15 @@ async def score_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def lineup_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    lineup = get_match_lineup()
-    await context.bot.send_message(chat_id=update.message.chat_id, text=lineup, parse_mode='Markdown')
+    img_buf, caption = get_lineup_image()
+    if img_buf:
+        await context.bot.send_photo(
+            chat_id=update.message.chat_id,
+            photo=img_buf,
+            caption=caption,
+        )
+    else:
+        await context.bot.send_message(chat_id=update.message.chat_id, text=caption)
 
 
 def handle_response(text:str)-> str:
@@ -106,16 +114,22 @@ async def handle_new_chat_members(update: Update, context: ContextTypes.DEFAULT_
                 group_ids.append(group_id)
             await context.bot.send_message(chat_id=group_id, text='Hello! Baby Dolls, Imma call the next Game!')
 
-async def check_barca_match(context: ContextTypes.DEFAULT_TYPE):
-    if does_barca_play_today():
-        match = get_next_barca_match()
-        # Send match information to each group
+async def daily_todaymatch(context: ContextTypes.DEFAULT_TYPE):
+    """Runs daily at 10:00 CET — notifies all groups if Barça plays today."""
+    if does_barca_play_today('matches.json'):
+        match = get_barca_today_match('matches.json')
         for group_id in group_ids:
-            await context.bot.send_message(chat_id=group_id, text=f'{match}')
-
-
-def add_daily_job(updater: Updater):
-    updater.job_queue.run_daily(check_barca_match, time(hour=14))
+            try:
+                message = await context.bot.send_message(chat_id=group_id, text=f"{match}")
+                await context.bot.pin_chat_message(chat_id=group_id, message_id=message.message_id)
+            except Exception as e:
+                print(f"Error sending to {group_id}: {e}")
+    else:
+        for group_id in group_ids:
+            try:
+                await context.bot.send_message(chat_id=group_id, text="No Barça match today.")
+            except Exception as e:
+                print(f"Error sending to {group_id}: {e}")
 
 
 
@@ -163,8 +177,10 @@ if __name__ == "__main__":
     ## errors
     app.add_error_handler(error)
     
-    # Add daily job
-    # add_daily_job(updater)
+    # Daily job: 10:00 AM CET every day
+    cet = timezone('CET')
+    app.job_queue.run_daily(daily_todaymatch, time(hour=10, minute=0, tzinfo=cet))
+    print("Scheduled daily todaymatch at 10:00 CET")
 
     # polling
     print("Polling...")
