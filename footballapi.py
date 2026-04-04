@@ -19,11 +19,10 @@ if response.status_code == 200:
 	# The request was successful
 	matches_data = response.json()
 	
-	# Filter to only include future matches (status SCHEDULED or TIMED)
 	from datetime import datetime
 	future_matches = [m for m in matches_data['matches'] 
 	                  if datetime.strptime(m['utcDate'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now()
-	                  and m['status'] in ['SCHEDULED', 'TIMED']]
+	                  and m['status'] in ['SCHEDULED', 'TIMED', 'IN_PLAY']]
 	
 	# Sort by date
 	future_matches.sort(key=lambda x: x['utcDate'])
@@ -103,18 +102,35 @@ def format_next_match(match):
     return f'{home_team}-{away_team} | {competition} | In {days_left} Day{s} | @ TEH: {match_date_teh} - VANC: {match_date_vanc} - CET: {match_date_cet}'
 
 def does_barca_play_today(json_file='matches.json'):
-   # read json
+   # Check football-data.org matches
    with open(json_file, 'r') as f:
       matches = json.load(f)
       
    today = datetime.now()
-   next_match = get_next_match(matches, 'FC Barcelona')['date']
-   print(f"Today is {today.strftime('%Y-%m-%d')} | Next match is {next_match.strftime('%Y-%m-%d')}")
-   if today.strftime('%Y-%m-%d') == next_match.strftime('%Y-%m-%d'):
-      print('FC Barcelona plays today!')
-      return True
-   else:
-      return False
+   next_match_data = get_next_match(matches, 'FC Barcelona')
+   if next_match_data:
+      next_match = next_match_data['date']
+      print(f"Today is {today.strftime('%Y-%m-%d')} | Next match is {next_match.strftime('%Y-%m-%d')}")
+      if today.strftime('%Y-%m-%d') == next_match.strftime('%Y-%m-%d'):
+         print('FC Barcelona plays today!')
+         return True
+
+   # Fallback: check FotMob for matches not in football-data.org (Copa del Rey etc.)
+   try:
+      from fotmob_utils import get_fotmob_current_match
+      fotmob_match = get_fotmob_current_match()
+      if fotmob_match:
+         status = fotmob_match.get('status', {})
+         utc_time = status.get('utcTime', '')
+         if utc_time:
+            match_date = datetime.strptime(utc_time[:10], '%Y-%m-%d')
+            if today.strftime('%Y-%m-%d') == match_date.strftime('%Y-%m-%d'):
+               print('FC Barcelona plays today! (via FotMob)')
+               return True
+   except Exception as e:
+      print(f"FotMob fallback error: {e}")
+
+   return False
    
 
 
@@ -132,16 +148,39 @@ def get_next_barca_match(json_file='matches.json'):
       return None
    
 def get_barca_today_match(json_file='matches.json'):
-   # read json
+   if not does_barca_play_today(json_file):
+      print('No upcoming matches found for FC Barcelona Today.')
+      return None
+
+   # Try football-data.org first
    with open(json_file, 'r') as f:
       matches = json.load(f)
    next_match = get_next_match(matches, 'FC Barcelona')
-   if does_barca_play_today(json_file):
+   today = datetime.now()
+
+   if next_match and today.strftime('%Y-%m-%d') == next_match['date'].strftime('%Y-%m-%d'):
       print(format_today_match(next_match))
       return format_today_match(next_match)
-   else:
-      print('No upcoming matches found for FC Barcelona Today.')
-      return None
+
+   # Fallback: format from FotMob
+   try:
+      from fotmob_utils import get_fotmob_current_match
+      fotmob_match = get_fotmob_current_match()
+      if fotmob_match:
+         home = fotmob_match.get('home', {}).get('name', '?')
+         away = fotmob_match.get('away', {}).get('name', '?')
+         tournament = fotmob_match.get('tournament', {}).get('name', '?')
+         utc_time = fotmob_match.get('status', {}).get('utcTime', '')
+         if utc_time:
+            utc_date = utc_time.replace('.000Z', 'Z')
+            match_date_teh = convert_utc_to_city(utc_date, to_city='Asia/Tehran')
+            match_date_vanc = convert_utc_to_city(utc_date, to_city='America/Vancouver')
+            match_date_cet = convert_utc_to_city(utc_date, to_city='CET')
+            return f'{home}-{away} | {tournament} | @ TEH: {match_date_teh} - VANC: {match_date_vanc} - CET: {match_date_cet}'
+   except Exception as e:
+      print(f"FotMob fallback error: {e}")
+
+   return None
 
 def get_laliga_table():
     """Get the current La Liga standings"""
