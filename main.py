@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram.ext import Updater
 from telegram import Bot
 from telegram import ChatMemberUpdated
-from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table, get_barca_latest_score
+from footballapi import get_next_barca_match, does_barca_play_today, get_barca_today_match, get_laliga_table, get_laliga_table_image, get_barca_latest_score
 from fotmob_utils import get_match_lineup, get_lineup_image
 from datetime import time
 from pytz import timezone
@@ -51,8 +51,16 @@ async def todaymatch_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 
 async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    table = get_laliga_table()
-    await context.bot.send_message(chat_id=update.message.chat_id, text=table, parse_mode='Markdown')
+    img_buf, caption = get_laliga_table_image()
+    if img_buf:
+        await context.bot.send_photo(
+            chat_id=update.message.chat_id,
+            photo=img_buf,
+            caption=caption,
+        )
+    else:
+        table = get_laliga_table()
+        await context.bot.send_message(chat_id=update.message.chat_id, text=table, parse_mode='Markdown')
 
 
 async def score_command(update: Update, context: ContextTypes.DEFAULT_TYPE):

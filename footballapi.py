@@ -1,7 +1,8 @@
 import requests
-#prety print
 import pprint
 import json
+import io
+from PIL import Image, ImageDraw, ImageFont
 
 # Thanks to : https://www.football-data.org/
 # Documentation : https://www.football-data.org/documentation/quickstart
@@ -212,6 +213,142 @@ def get_laliga_table():
         return table_text
     else:
         return f"Error fetching La Liga table: {response.status_code}"
+
+
+def _draw_rounded_rect(draw, xy, radius, fill):
+    x0, y0, x1, y1 = xy
+    draw.rectangle([x0 + radius, y0, x1 - radius, y1], fill=fill)
+    draw.rectangle([x0, y0 + radius, x1, y1 - radius], fill=fill)
+    draw.pieslice([x0, y0, x0 + 2 * radius, y0 + 2 * radius], 180, 270, fill=fill)
+    draw.pieslice([x1 - 2 * radius, y0, x1, y0 + 2 * radius], 270, 360, fill=fill)
+    draw.pieslice([x0, y1 - 2 * radius, x0 + 2 * radius, y1], 90, 180, fill=fill)
+    draw.pieslice([x1 - 2 * radius, y1 - 2 * radius, x1, y1], 0, 90, fill=fill)
+
+
+def get_laliga_table_image():
+    """Generate a graphic La Liga standings table. Returns (BytesIO, caption) or (None, error)."""
+    url = "https://api.football-data.org/v4/competitions/PD/standings"
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        return None, f"Error fetching La Liga table: {response.status_code}"
+
+    standings_data = response.json()
+    standings = standings_data['standings'][0]['table']
+
+    ROW_H = 32
+    HEADER_H = 60
+    PAD = 16
+    W = 620
+    H = HEADER_H + len(standings) * ROW_H + PAD * 2
+
+    bg = (25, 25, 30)
+    header_bg = (40, 40, 50)
+    row_even = (32, 32, 38)
+    row_odd = (38, 38, 45)
+    barca_bg = (20, 40, 70)
+    text_color = (220, 220, 220)
+    dim_text = (150, 150, 160)
+    accent = (100, 140, 230)
+    gold = (220, 190, 60)
+    green = (60, 180, 80)
+    red = (200, 60, 50)
+    separator = (55, 55, 65)
+
+    img = Image.new('RGB', (W, H), bg)
+    draw = ImageDraw.Draw(img)
+
+    try:
+        font_title = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 18)
+        font_header = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 11)
+        font_row = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 13)
+        font_row_bold = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 13)
+    except:
+        font_title = font_header = font_row = font_row_bold = ImageFont.load_default()
+
+    # Title
+    title = "La Liga Standings"
+    bbox = draw.textbbox((0, 0), title, font=font_title)
+    tw = bbox[2] - bbox[0]
+    draw.text(((W - tw) / 2, 12), title, fill=gold, font=font_title)
+
+    # Column positions
+    col_pos = 24
+    col_name = 55
+    col_p = 320
+    col_w = 370
+    col_d = 410
+    col_l = 450
+    col_gd = 490
+    col_pts = 555
+
+    # Header row
+    hy = HEADER_H - 18
+    draw.text((col_pos, hy), "#", fill=dim_text, font=font_header)
+    draw.text((col_name, hy), "TEAM", fill=dim_text, font=font_header)
+    draw.text((col_p, hy), "P", fill=dim_text, font=font_header)
+    draw.text((col_w, hy), "W", fill=dim_text, font=font_header)
+    draw.text((col_d, hy), "D", fill=dim_text, font=font_header)
+    draw.text((col_l, hy), "L", fill=dim_text, font=font_header)
+    draw.text((col_gd, hy), "GD", fill=dim_text, font=font_header)
+    draw.text((col_pts, hy), "PTS", fill=dim_text, font=font_header)
+
+    # Rows
+    for i, team in enumerate(standings):
+        y = HEADER_H + i * ROW_H
+        pos = team['position']
+        name = team['team']['name']
+        played = team['playedGames']
+        won = team['won']
+        drawn = team['draw']
+        lost = team['lost']
+        gd = team['goalDifference']
+        points = team['points']
+
+        is_barca = name.startswith("FC Barcelona") or name.startswith("Barcelona")
+
+        # Row background
+        if is_barca:
+            row_bg = barca_bg
+        elif i % 2 == 0:
+            row_bg = row_even
+        else:
+            row_bg = row_odd
+        draw.rectangle([PAD, y, W - PAD, y + ROW_H], fill=row_bg)
+
+        # UCL / relegation zone indicators
+        if pos <= 4:
+            draw.rectangle([PAD, y, PAD + 3, y + ROW_H], fill=green)
+        elif pos >= 18:
+            draw.rectangle([PAD, y, PAD + 3, y + ROW_H], fill=red)
+
+        ry = y + 8
+        row_font = font_row_bold if is_barca else font_row
+        name_color = accent if is_barca else text_color
+
+        # Truncate long names
+        if len(name) > 28:
+            name = name[:26] + ".."
+
+        draw.text((col_pos, ry), str(pos), fill=dim_text, font=row_font)
+        draw.text((col_name, ry), name, fill=name_color, font=row_font)
+        draw.text((col_p, ry), str(played), fill=text_color, font=row_font)
+        draw.text((col_w, ry), str(won), fill=text_color, font=row_font)
+        draw.text((col_d, ry), str(drawn), fill=text_color, font=row_font)
+        draw.text((col_l, ry), str(lost), fill=text_color, font=row_font)
+
+        gd_color = green if gd > 0 else (red if gd < 0 else dim_text)
+        draw.text((col_gd, ry), f"{gd:+d}", fill=gd_color, font=row_font)
+
+        draw.text((col_pts, ry), str(points), fill=gold if is_barca else text_color, font=font_row_bold)
+
+        # Separator line
+        draw.line([(PAD, y + ROW_H), (W - PAD, y + ROW_H)], fill=separator, width=1)
+
+    buf = io.BytesIO()
+    img.save(buf, format='PNG')
+    buf.seek(0)
+    return buf, "La Liga Standings"
 
 
 def get_barca_latest_score():
